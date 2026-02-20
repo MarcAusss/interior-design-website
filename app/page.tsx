@@ -1,4 +1,5 @@
 import AboutPage from "./components/about";
+import ContactPage from "./components/contact";
 import ExpertiesPage from "./components/experties";
 import LandingPage from "./components/landing";
 import ProjectsPage from "./components/projects";
@@ -22,6 +23,9 @@ export default function Home() {
         <ExpertiesPage/>
       </div>
 
+      <div className="">
+        <ContactPage/>
+      </div>
     </>      
   );
 }
