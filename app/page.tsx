@@ -1,4 +1,5 @@
 import AboutPage from "./components/about";
+import ExpertiesPage from "./components/experties";
 import LandingPage from "./components/landing";
 import ProjectsPage from "./components/projects";
 
@@ -18,7 +19,7 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-354">
-
+        <ExpertiesPage/>
       </div>
 
     </>      
