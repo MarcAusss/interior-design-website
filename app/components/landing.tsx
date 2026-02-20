@@ -29,7 +29,7 @@ const slides: Slide[] = [
     street: "3291 Tahao Road",
     location: "Tabaco City, Philippines",
     year: "2026",
-    cover: "/images/house1.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house1.jpg",
       "/images/house2.jpg",
@@ -44,7 +44,7 @@ const slides: Slide[] = [
     street: "14 Palm Street",
     location: "Legazpi City, Philippines",
     year: "2025",
-    cover: "/images/house2.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house2.jpg",
       "/images/house3.jpg",
@@ -59,7 +59,7 @@ const slides: Slide[] = [
     street: "77 Skyline Drive",
     location: "Naga City, Philippines",
     year: "2024",
-    cover: "/images/house3.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house3.jpg",
       "/images/house4.jpg",
@@ -74,7 +74,7 @@ const slides: Slide[] = [
     street: "19 Regal Lane",
     location: "Manila, Philippines",
     year: "2023",
-    cover: "/images/house4.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house4.jpg",
       "/images/house1.jpg",
@@ -89,7 +89,7 @@ const slides: Slide[] = [
     street: "88 Summit Road",
     location: "Cebu City, Philippines",
     year: "2026",
-    cover: "/images/house1.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house1.jpg",
       "/images/house3.jpg",
@@ -104,7 +104,7 @@ const slides: Slide[] = [
     street: "22 Sunrise Blvd",
     location: "Davao City, Philippines",
     year: "2024",
-    cover: "/images/house2.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house2.jpg",
       "/images/house4.jpg",
@@ -119,7 +119,7 @@ const slides: Slide[] = [
     street: "9 Symphony Way",
     location: "Baguio City, Philippines",
     year: "2025",
-    cover: "/images/house3.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house3.jpg",
       "/images/house1.jpg",
@@ -134,7 +134,7 @@ const slides: Slide[] = [
     street: "5 Ocean Crest",
     location: "Batangas, Philippines",
     year: "2023",
-    cover: "/images/house4.jpg",
+    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
       "/images/house4.jpg",
       "/images/house2.jpg",
@@ -257,7 +257,7 @@ export default function LandingPage() {
       </motion.div>
 
       {/* CAROUSEL */}
-      <div className="h-[70vh] w-full relative flex items-center justify-center bg-black overflow-hidden">
+      <div className="h-[80vh] w-full relative flex items-center justify-center bg-black overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={slide.id}
@@ -353,7 +353,7 @@ export default function LandingPage() {
 
               <h1 className="text-3xl mb-6">{slide.name}</h1>
 
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[400px]">
+              <div className="grid grid-cols-2 grid-rows-2 gap-4 h-100">
                 {slide.images.map((img, i) => (
                   <div key={i} className="relative">
                     <Image

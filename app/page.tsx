@@ -7,11 +7,11 @@ import ProjectsPage from "./components/projects";
 export default function Home() {
   return (
     <>
-      <div className="">
+      <div className="my-10">
         <LandingPage/>
       </div>
 
-      <div className="mx-auto max-w-354">
+      <div className="mx-auto max-w-354 my-10">
         <AboutPage/>
       </div>
 
