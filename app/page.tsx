@@ -19,7 +19,7 @@ export default function Home() {
         <ProjectsPage/>
       </div>
 
-      <div className="mx-auto max-w-354 h-screen">
+      <div className="mx-auto max-w-354">
         <ExpertiesPage/>
       </div>
 
