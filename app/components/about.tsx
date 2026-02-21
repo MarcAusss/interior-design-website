@@ -7,7 +7,7 @@ export default function AboutPage() {
         <div>
             <div className="flex mb-10 mt-20">
                 <h1 className="text-7xl">About Us</h1>
-                <p className="">[1]</p>
+                <p className="">[01]</p>
             </div>
             <div className="flex justify-between">
                 <div className="w-35 h-20 bg-red-200 relative">

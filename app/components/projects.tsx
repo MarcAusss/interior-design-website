@@ -24,112 +24,112 @@ function Project({ titleTop, titleBottom, images }: ProjectProps) {
 
   return (
     <motion.div
-      ref={ref}
-      layout="position"
-      initial={{ opacity: 0, y: 80 }}
-      animate={{
-        opacity: inView ? 1 : 0.25,
-        y: inView ? 0 : 20,
-      }}
-      transition={{
-        opacity: { duration: 0.4 },
-        y: { type: "spring", stiffness: 80, damping: 18 },
-      }}
-      className="flex justify-between items-end py-10 border-b border-gray-300"
-    >
-      {/* LEFT SIDE */}
-      <div className="w-full">
-        {/* TITLE ROW */}
-        <motion.div
-          layout="position"
-          className="flex gap-5 items-end"
+        ref={ref}
+        layout="position"
+        initial={{ opacity: 0, y: 80 }}
+        animate={{
+            opacity: inView ? 1 : 0.25,
+            y: inView ? 0 : 20,
+        }}
+        transition={{
+            opacity: { duration: 0.4 },
+            y: { type: "spring", stiffness: 80, damping: 18 },
+        }}
+        className="flex justify-between items-end py-10 border-b border-gray-300"
         >
-          {/* TEXT LEFT */}
-          <motion.p
-            layout="position"
-            animate={{
-              x: inView ? -10 : 0,
-            }}
-            transition={{ type: "spring", stiffness: 120, damping: 20 }}
-            className="text-4xl md:text-6xl font-light"
-          >
-            {titleTop}
-          </motion.p>
-
-          {/* IMAGE (moves smoothly) */}
-          <motion.div
-            layoutId={layoutId}
-            layout="position"
-            animate={{
-              width: inView ? 288 : 120,
-              height: inView ? 200 : 64,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 90,
-              damping: 18,
-            }}
-            className="relative overflow-hidden"
-          >
-            <Image
-              src={images[0]}
-              alt=""
-              fill
-              className="object-cover"
-            />
-          </motion.div>
-
-          {/* TEXT RIGHT */}
-          <motion.p
-            layout="position"
-            animate={{
-              x: inView ? -20 : 0,
-            }}
-            transition={{ type: "spring", stiffness: 120, damping: 20 }}
-            className="text-4xl md:text-6xl font-light"
-          >
-            {titleBottom}
-          </motion.p>
-        </motion.div>
-
-        {/* GALLERY */}
-        <motion.div
-          layout="position"
-          animate={{
-            opacity: inView ? 1 : 0,
-            height: inView ? "auto" : 0,
-          }}
-          transition={{
-            opacity: { duration: 0.3 },
-            height: { duration: 0.4 },
-          }}
-          className="flex gap-6 mt-8 overflow-hidden"
-        >
-          {images.slice(1).map((img, index) => (
+        {/* LEFT SIDE */}
+        <div className="w-full">
+            {/* TITLE ROW */}
             <motion.div
-              key={index}
-              layout="position"
-              className="w-72 h-50 relative"
-              transition={{ type: "spring", stiffness: 90, damping: 18 }}
+            layout="position"
+            className="flex gap-5 items-end"
             >
-              <Image
-                src={img}
+            {/* TEXT LEFT */}
+            <motion.p
+                layout="position"
+                animate={{
+                x: inView ? -10 : 0,
+                }}
+                transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                className="text-4xl md:text-6xl font-light"
+            >
+                {titleTop}
+            </motion.p>
+
+            {/* IMAGE (moves smoothly) */}
+            <motion.div
+                layoutId={layoutId}
+                layout="position"
+                animate={{
+                width: inView ? 288 : 120,
+                height: inView ? 200 : 64,
+                }}
+                transition={{
+                type: "spring",
+                stiffness: 90,
+                damping: 18,
+                }}
+                className="relative overflow-hidden"
+            >
+                <Image
+                src={images[0]}
                 alt=""
                 fill
                 className="object-cover"
-              />
+                />
             </motion.div>
-          ))}
-        </motion.div>
-      </div>
 
-      {/* RIGHT SIDE */}
-      <motion.div layout="position">
-        <Link href="" className="flex items-center">
-          View Project
-          <FontAwesomeIcon icon={faArrowRight} className="ml-5" />
-        </Link>
-      </motion.div>
+            {/* TEXT RIGHT */}
+            <motion.p
+                layout="position"
+                animate={{
+                x: inView ? -20 : 0,
+                }}
+                transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                className="text-4xl md:text-6xl font-light"
+            >
+                {titleBottom}
+            </motion.p>
+            </motion.div>
+
+            {/* GALLERY */}
+            <motion.div
+            layout="position"
+            animate={{
+                opacity: inView ? 1 : 0,
+                height: inView ? "auto" : 0,
+            }}
+            transition={{
+                opacity: { duration: 0.3 },
+                height: { duration: 0.4 },
+            }}
+            className="flex gap-6 mt-8 overflow-hidden"
+            >
+            {images.slice(1).map((img, index) => (
+                <motion.div
+                key={index}
+                layout="position"
+                className="w-72 h-50 relative"
+                transition={{ type: "spring", stiffness: 90, damping: 18 }}
+                >
+                <Image
+                    src={img}
+                    alt=""
+                    fill
+                    className="object-cover"
+                />
+                </motion.div>
+            ))}
+            </motion.div>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <motion.div layout="position">
+            <Link href="" className="flex items-center">
+            View Project
+            <FontAwesomeIcon icon={faArrowRight} className="ml-5" />
+            </Link>
+        </motion.div>
     </motion.div>
   );
 }
@@ -150,7 +150,7 @@ export default function ProjectsPage() {
           <h1 className="text-4xl md:text-7xl">
             Selected Projects
           </h1>
-          <p>[3]</p>
+          <p>[02]</p>
         </motion.div>
 
         <Project
