@@ -219,7 +219,7 @@ export default function LandingPage() {
           Vision — Precision
         </h1>
 
-        <div className="w-72 md:w-96 h-1 bg-gray-300 rounded-full overflow-hidden">
+        <div className="w-72 md:w-200 h-1 bg-gray-300 rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-black"
             animate={{ width: `${progress}%` }}
