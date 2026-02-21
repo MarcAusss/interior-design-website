@@ -1,8 +1,8 @@
-import AboutPage from "./components/about";
-import ContactPage from "./components/contact";
-import ExpertiesPage from "./components/experties";
-import LandingPage from "./components/landing";
-import ProjectsPage from "./components/projects";
+import AboutPage from "./Landing/about";
+import ContactPage from "./Landing/contact";
+import ExpertiesPage from "./Landing/experties";
+import LandingPage from "./Landing/landing";
+import ProjectsPage from "./Landing/projects";
 
 export default function Home() {
   return (

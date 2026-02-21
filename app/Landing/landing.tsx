@@ -214,7 +214,7 @@ export default function LandingPage() {
   /* ---------------- LOADING SCREEN ---------------- */
   if (!isLoaded) {
     return (
-      <div className="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
+      <div className="fixed inset-0 bg-[#FFFAF0] flex flex-col items-center justify-center z-50">
         <h1 className="text-5xl md:text-[100px] mb-10">
           Vision — Precision
         </h1>

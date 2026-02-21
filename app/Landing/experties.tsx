@@ -100,7 +100,7 @@ function AccordionItem({
 
                 <Link
                 className="bg-black px-7 py-3 rounded-full text-white"
-                href=""
+                href="/Experties/"
                 >
                 View all Works
                 </Link>
