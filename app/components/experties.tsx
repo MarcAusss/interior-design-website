@@ -6,107 +6,107 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 type AccordionItemProps = {
-  index: number;
-  activeIndex: number;
-  setActiveIndex: (index: number) => void;
-  title: string;
-  description: string;
-  solutions: string[];
-  image: string;
+    index: number;
+    activeIndex: number;
+    setActiveIndex: (index: number) => void;
+    title: string;
+    description: string;
+    solutions: string[];
+    image: string;
 };
 
 function AccordionItem({
-  index,
-  activeIndex,
-  setActiveIndex,
-  title,
-  description,
-  solutions,
-  image,
+    index,
+    activeIndex,
+    setActiveIndex,
+    title,
+    description,
+    solutions,
+    image,
 }: AccordionItemProps) {
-  const isOpen = activeIndex === index;
+    const isOpen = activeIndex === index;
 
   return (
     <motion.div
-      layout
-      initial={{ y: 80 }}
-      whileInView={{ y: 0 }}
-      viewport={{ once: true }}
-      transition={{ type: "spring", stiffness: 70 }}
-      className="py-10 border-b border-gray-200"
-    >
-      {/* HEADER */}
-      <div
-        onClick={() => setActiveIndex(isOpen ? -1 : index)}
-        className="flex justify-between items-start cursor-pointer"
-      >
-        <h1 className="text-4xl md:text-6xl w-72 md:w-auto leading-tight">
-          {title}
-        </h1>
-
-        <motion.div
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          className="text-3xl font-light"
-        >
-          +
-        </motion.div>
-      </div>
-
-      {/* CONTENT */}
-      <motion.div
         layout
-        initial={false}
-        animate={{
-          height: isOpen ? "auto" : 0,
-          marginTop: isOpen ? 40 : 0,
-        }}
-        transition={{
-          height: { duration: 0.4 },
-          marginTop: { duration: 0.4 },
-        }}
-        className="overflow-hidden"
-      >
-        <div className="flex flex-col md:flex-row gap-12 md:gap-56">
-          {/* IMAGE */}
-          <div className="w-full md:w-96 h-60 relative">
-            <Image
-              src={image}
-              fill
-              alt=""
-              className="object-cover"
-            />
-          </div>
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+        transition={{ type: "spring", stiffness: 70 }}
+        className="py-10 border-b border-gray-200"
+        >
+        {/* HEADER */}
+        <div
+            onClick={() => setActiveIndex(isOpen ? -1 : index)}
+            className="flex justify-between items-start cursor-pointer"
+        >
+            <h1 className="text-4xl md:text-6xl w-72 md:w-auto leading-tight">
+            {title}
+            </h1>
 
-          {/* TEXT SIDE */}
-          <div className="w-full md:w-120 pb-10">
-            <div className="mb-10">
-              <div className="border-b w-full border-gray-200 py-2">
-                <h1 className="font-semibold">What we do</h1>
-              </div>
-              <p className="py-2">{description}</p>
-            </div>
-
-            <div className="mb-10">
-              <div className="border-b w-full border-gray-200 py-2">
-                <h1 className="font-semibold">Solutions</h1>
-              </div>
-              <ul className="gap-2 py-2 flex flex-col">
-                {solutions.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <Link
-              className="bg-black px-7 py-3 rounded-full text-white"
-              href=""
+            <motion.div
+            animate={{ rotate: isOpen ? 45 : 0 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="text-3xl font-light"
             >
-              View all Works
-            </Link>
-          </div>
+            +
+            </motion.div>
         </div>
-      </motion.div>
+
+        {/* CONTENT */}
+        <motion.div
+            layout
+            initial={false}
+            animate={{
+            height: isOpen ? "auto" : 0,
+            marginTop: isOpen ? 40 : 0,
+            }}
+            transition={{
+            height: { duration: 0.4 },
+            marginTop: { duration: 0.4 },
+            }}
+            className="overflow-hidden"
+        >
+            <div className="flex flex-col md:flex-row gap-12 md:gap-56">
+            {/* IMAGE */}
+            <div className="w-full md:w-96 h-60 relative">
+                <Image
+                src={image}
+                fill
+                alt=""
+                className="object-cover"
+                />
+            </div>
+
+            {/* TEXT SIDE */}
+            <div className="w-full md:w-120 pb-10">
+                <div className="mb-10">
+                <div className="border-b w-full border-gray-200 py-2">
+                    <h1 className="font-semibold">What we do</h1>
+                </div>
+                <p className="py-2">{description}</p>
+                </div>
+
+                <div className="mb-10">
+                <div className="border-b w-full border-gray-200 py-2">
+                    <h1 className="font-semibold">Solutions</h1>
+                </div>
+                <ul className="gap-2 py-2 flex flex-col">
+                    {solutions.map((item, i) => (
+                    <li key={i}>{item}</li>
+                    ))}
+                </ul>
+                </div>
+
+                <Link
+                className="bg-black px-7 py-3 rounded-full text-white"
+                href=""
+                >
+                View all Works
+                </Link>
+            </div>
+            </div>
+        </motion.div>
     </motion.div>
   );
 }
