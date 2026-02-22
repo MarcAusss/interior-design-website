@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Forma Studio",
+  title: "Logo Studio",
   description: "Architecture & Interior Studio",
 };
 

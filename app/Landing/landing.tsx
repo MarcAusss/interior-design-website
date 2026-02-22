@@ -31,10 +31,10 @@ const slides: Slide[] = [
     year: "2026",
     cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
     images: [
-      "/images/house1.jpg",
-      "/images/house2.jpg",
-      "/images/house3.jpg",
-      "/images/house4.jpg",
+      "/images/image-2.png",
+      "/images/image-3.png",
+      "/images/image-4.png",
+      "/images/image-5.png",
     ],
   },
   {
@@ -44,12 +44,57 @@ const slides: Slide[] = [
     street: "14 Palm Street",
     location: "Legazpi City, Philippines",
     year: "2025",
-    cover: "/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg",
+    cover: "/images/image 15.png",
     images: [
-      "/images/house2.jpg",
-      "/images/house3.jpg",
-      "/images/house4.jpg",
-      "/images/house1.jpg",
+      "/images/image-2.png",
+      "/images/image-3.png",
+      "/images/image-4.png",
+      "/images/image-5.png",
+    ],
+  },
+  {
+    id: 3,
+    name: "inda ko",
+    subdivision: "inda ko",
+    street: "inda ko",
+    location: "Legazpi City, Philippines",
+    year: "2025",
+    cover: "/images/image.png",
+    images: [
+      "/images/image-2.png",
+      "/images/image-3.png",
+      "/images/image-4.png",
+      "/images/image-5.png",
+    ],
+  },
+  {
+    id: 4,
+    name: "inda ko",
+    subdivision: "inda ko",
+    street: "inda ko",
+    location: "Legazpi City, Philippines",
+    year: "2025",
+    cover: "/images/created_with_our_tool_center@2x.webp",
+    images: [
+      "/images/image-2.png",
+      "/images/image-3.png",
+      "/images/image-4.png",
+      "/images/image-5.png",
+    ],
+  },
+  {
+    id: 5,
+    name: "inda ko",
+    subdivision: "inda ko",
+    street: "inda ko",
+    location: "Legazpi City, Philippines",
+    year: "2025",
+    cover: "/images/interior.jpg",
+    images: [
+      "/images/image-2.png",
+      "/images/image-3.png",
+      "/images/image-4.png",
+      "/images/image-5.png",
     ],
   },
 ];
@@ -166,7 +211,7 @@ export default function LandingPage() {
           transition={{ delay: 0.5 }}
         >
           <p className="my-5">
-            Forma Studio blends architectural discipline with refined interiors to <br />
+            Logo Studio blends architectural discipline with refined interiors to <br />
             create spaces that timeless, functional, and uniquely yours.
           </p>
         </motion.div>
@@ -246,7 +291,7 @@ export default function LandingPage() {
         </h1>
 
         <p className="text-center text-sm">
-          Forma Studio blends architectural discipline with refined interiors to
+          Logo Studio blends architectural discipline with refined interiors to
           create timeless and functional spaces.
         </p>
 

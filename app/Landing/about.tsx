@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="px-6 md:px-20 py-10 md:py-20">
+    <div className="py-10 md:py-20">
 
         
         
@@ -23,7 +23,7 @@ export default function AboutPage() {
 
 
 
-        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-20">
+        <div className="flex flex-col md:flex-row justify-between gap-10">
 
             
             
@@ -31,8 +31,8 @@ export default function AboutPage() {
 
 
 
-            <div className="w-full md:w-1/4 h-60 md:h-80 relative">
-            <Image src="/images/project1-main.jpg" alt="About Left" fill className="object-cover rounded-lg" />
+            <div className="w-full md:w-1/4 h-60 md:h-60 relative md:mr-20">
+            <Image src="/images/image-4.png" alt="About Left" fill className="object-cover rounded-lg" />
             </div>
 
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
             <div className="w-full md:w-full flex flex-col">
                 <p className="mb-4 text-base md:text-lg leading-relaxed">
-                    Founded with a vision to create spaces that tell stories, Forma <br />Studio brings together a multidisciplinary team of designers, <br />architects, and creatives. Each project is a journey of collaboration <br />— listening, researching, and imagining alongside our clients.
+                    Founded with a vision to create spaces that tell stories, Logo <br />Studio brings together a multidisciplinary team of designers, <br />architects, and creatives. Each project is a journey of collaboration <br />— listening, researching, and imagining alongside our clients.
                 </p>
                 <p className="text-base md:text-lg leading-relaxed">
                     We design with intention. Whether it&apos;s a modern home, a heritage <br />restoration, or a commercial interior, every detail is considered, <br />every space is personal.
@@ -63,8 +63,8 @@ export default function AboutPage() {
 
 
 
-            <div className="w-full md:w-125 h-60 md:h-96 relative">
-                <Image src="/images/project2-main.jpg" alt="About Right" fill className="object-cover rounded-lg" />
+            <div className="w-full md:w-205 h-60 md:h-114 relative">
+                <Image src="/images/32ed3284d24ae75cc2f560c90d116628.jpg" alt="About Right" fill className="object-cover rounded-lg" />
             </div>
         </div>
 

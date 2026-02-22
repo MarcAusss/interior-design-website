@@ -135,7 +135,7 @@ export default function ExpertiesPage() {
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
         title="Architectural Design"
-        image="/images/project1-main.jpg"
+        image="/images/Exterior-Cam02-R1-1-0-0-1-scaled.jpg"
         description="From conceptual development to construction documentation, we craft spaces that respond to context, function, and timeless beauty."
         solutions={[
           "Concept Development",
@@ -151,7 +151,7 @@ export default function ExpertiesPage() {
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
         title="Interior Design"
-        image="/images/project2-main.jpg"
+        image="/images/interior.jpg"
         description="We design interior environments that balance elegance, comfort, and usability — tailored to your lifestyle or brand."
         solutions={[
           "Space planning",
@@ -167,7 +167,7 @@ export default function ExpertiesPage() {
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
         title="Renovation & Restoration"
-        image="/images/project3-main.jpg"
+        image="/images/image 16.png"
         description="We transform and preserve spaces with thoughtful upgrades while respecting architectural heritage and structural integrity."
         solutions={[
           "Structural upgrades",
