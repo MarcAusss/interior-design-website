@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="py-10 md:py-20">
+    <div className="px-5 md:px-0 py-10 md:py-20">
 
         
         
