@@ -57,12 +57,21 @@ export default function TopNav() {
   return (
     <>
       {/* TOP BAR */}
-      <div className="fixed top-0 left-0 w-full bg-[#FFFAF0] flex justify-between items-center px-8 py-6 z-50">
-        <Link href="/" className="text-2xl font-bold">
-          LOGO
-        </Link>
+      <div
+        className={`fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 z-50 transition-colors duration-300 ${
+          open ? "bg-[#171717]" : "bg-[#FFFAF0]"
+        }`}
+      >
+        {/* Logo only when menu is closed */}
+        <div className="flex-1">
+          {!open && (
+            <Link href="/" className="text-2xl font-bold text-black">
+              LOGO
+            </Link>
+          )}
+        </div>
 
-        {/* HAMBURGER (always shown on all screens) */}
+        {/* HAMBURGER / X button (always in same position) */}
         <button
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
@@ -70,18 +79,18 @@ export default function TopNav() {
           className="relative w-8 h-6 flex flex-col justify-between z-50"
         >
           <span
-            className={`h-0.5 bg-black transition-all duration-300 ${
-              open ? "rotate-45 translate-y-2.5 bg-white" : ""
+            className={`h-0.5 transition-all duration-300 ${
+              open ? "rotate-45 translate-y-2.5 bg-white" : "bg-black"
             }`}
           />
           <span
-            className={`h-0.5 bg-black transition-all duration-300 ${
-              open ? "opacity-0" : ""
+            className={`h-0.5 transition-all duration-300 ${
+              open ? "opacity-0" : "bg-black"
             }`}
           />
           <span
-            className={`h-0.5 bg-black transition-all duration-300 ${
-              open ? "-rotate-45 -translate-y-2.5 bg-white" : ""
+            className={`h-0.5 transition-all duration-300 ${
+              open ? "-rotate-45 -translate-y-2.5 bg-white" : "bg-black"
             }`}
           />
         </button>
@@ -97,7 +106,7 @@ export default function TopNav() {
             transition={{ duration: 0.6, ease: "easeInOut" }}
             className="fixed inset-0 bg-[#171717] text-white z-40 overflow-y-auto"
           >
-            {/* MOBILE VIEW (stacked) */}
+            {/* MOBILE VIEW */}
             <div className="flex flex-col items-center md:hidden px-6 pt-20 space-y-8">
               {navItems.map((item, index) => (
                 <div key={index} className="flex flex-col items-center w-full">
@@ -109,7 +118,6 @@ export default function TopNav() {
                     {item.title}
                   </Link>
 
-                  {/* Submenu for mobile */}
                   {item.sub && (
                     <div className="flex flex-col items-center mt-2 space-y-2">
                       {item.sub.map((sub) => (
@@ -128,7 +136,7 @@ export default function TopNav() {
               ))}
             </div>
 
-            {/* DESKTOP VIEW (original left/right layout) */}
+            {/* DESKTOP VIEW */}
             <div className="hidden md:flex h-full">
               {/* LEFT SIDE */}
               <div className="w-1/2 flex flex-col justify-center pl-20 space-y-10">
